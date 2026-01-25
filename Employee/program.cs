@@ -6,6 +6,7 @@ namespace ems
     {
         public static void Main(string[] args)
         {
+            //creating object 
             Menu menu = new Menu();
             bool exit = false;
 
@@ -30,7 +31,7 @@ namespace ems
                         Console.Write("Enter Department: ");
                         string dept = Console.ReadLine();
                         Console.Write("Enter Salary: ");
-                        int salary = Convert.ToInt32(Console.ReadLine());
+                        int salary = Convert.ToInt32(Console.ReadLine()); // type casting
                         menu.Add(new Employee(name, dept, salary));
                         break;
 
@@ -72,7 +73,7 @@ namespace ems
                         break;
                 }
 
-                Console.WriteLine(); // blank line for readability
+                Console.WriteLine();
             }
         }
     }

@@ -6,8 +6,6 @@ namespace ems
     public class Menu
     {
         private List<Employee> employees = new List<Employee>();
-
-        // Add employee
         public void Add(Employee emp)
         {
             employees.Add(emp);
@@ -39,6 +37,7 @@ namespace ems
         // Update employee
         public void Update(int id)
         {
+            // var - automatically infer variables's type
             var emp = GetById(id);
             if (emp == null)
             {
@@ -60,8 +59,6 @@ namespace ems
             string salaryInput = Console.ReadLine();
             if (int.TryParse(salaryInput, out int salary))
                 emp.Salary = salary;
-
-            // If employee is Manager, update TeamSize
             if (emp is Manager manager)
             {
                 Console.Write("Enter Team Size: ");

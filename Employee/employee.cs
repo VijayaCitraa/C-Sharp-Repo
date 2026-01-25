@@ -8,7 +8,7 @@ namespace ems
         private int id;
         private string name;
 
-        // Constructor
+        // parametrized constructor
         public Employee(string name, string dept, int salary)
         {
             id = idCounter++;
@@ -18,7 +18,7 @@ namespace ems
         }
 
         // Encapsulation
-        public int Id => id; // read-only
+        public int Id => id; 
         public string Name
         {
             get { return name; }
@@ -27,7 +27,7 @@ namespace ems
         public string Dept { get; set; }
         public int Salary { get; set; }
 
-        // Virtual method for polymorphism
+        // Virtual - polymorphism
         public virtual string Display()
         {
             return $"ID: {Id}, Name: {Name}, Department: {Dept}, Salary: {Salary}";
