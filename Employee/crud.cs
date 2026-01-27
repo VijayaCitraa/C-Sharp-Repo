@@ -59,6 +59,7 @@ namespace ems
             string salaryInput = Console.ReadLine();
             if (int.TryParse(salaryInput, out int salary))
                 emp.Salary = salary;
+            // pattern matching
             if (emp is Manager manager)
             {
                 Console.Write("Enter Team Size: ");
